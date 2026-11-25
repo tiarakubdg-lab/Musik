@@ -1,22 +1,157 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La4You Musik</title>
+  <title>JASPOST | HAJI AKBAR DEVELOPER</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="overlay"></div>
 
-  <div class="content">
-    <h1>La4You Musik</h1>
-    <p>Dengarkan musik pilihanmu 🎧</p>
-    
-    <audio id="tiktokio.com_LQDp8B3bW007RDPMGVnX.7z" controls autoplay loop>
-      <source src="tiktokio.com_LQDp8B3bW007RDPMGVnX.7z" type="audio/mpeg">
-      Browser kamu tidak mendukung pemutar musik.
-    </audio>
+  <div id="loader">
+    <div class="bolt">⚡</div>
+    <h2>HAJI AKBAR DEVELOPER</h2>
+    <p>PREMIUM JASPOST SERVICE</p>
+    <div class="loading-line"><span></span></div>
   </div>
+
+  <header>
+    <div class="brand">✦ HAJI AKBAR <span>DEVELOPER</span></div>
+    <div class="tagline">PREMIUM JASPOST SERVICE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="crown">♛</div>
+      <h1>JASPOST <span>GOLD</span></h1>
+      <p>LAYANAN POSTING JUAL & CARI AKUN</p>
+      <div class="gold-line"></div>
+      <a href="#layanan" class="gold-button">MULAI SEKARANG</a>
+    </section>
+
+    <section class="queue">
+      <div>
+        <small>TOTAL ANTRIAN TERSIMPAN</small>
+        <h2 id="queueCount">0</h2>
+      </div>
+      <div class="queue-icon">⚡</div>
+    </section>
+
+    <section id="layanan">
+      <h2 class="section-title">PILIH LAYANAN</h2>
+      <div class="service-grid">
+        <button class="service-card" onclick="showForm('cari')">
+          <span>🔎</span>
+          <h3>CARI AKUN</h3>
+          <p>NEED / CARIKAN AKUN</p>
+        </button>
+
+        <button class="service-card" onclick="showForm('jual')">
+          <span>💰</span>
+          <h3>JUAL AKUN</h3>
+          <p>POSTING AKUN ANDA</p>
+        </button>
+      </div>
+    </section>
+
+    <section class="form-box" id="formCari" hidden>
+      <h2>🔎 FORMAT CARI AKUN</h2>
+      <p class="sub">Isi data akun yang sedang kamu cari.</p>
+
+      <form id="cariForm">
+        <label>AKUN</label>
+        <input id="cAkun" required placeholder="Nama / jenis akun">
+
+        <label>DANA</label>
+        <input id="cDana" required placeholder="Budget akun">
+
+        <label>SPEK</label>
+        <textarea id="cSpek" required placeholder="Spesifikasi akun"></textarea>
+
+        <label>NOMER</label>
+        <input id="cNomor" required placeholder="Nomor WhatsApp kamu">
+
+        <button class="gold-button" type="submit">KIRIM KE WHATSAPP ⚡</button>
+      </form>
+    </section>
+
+    <section class="form-box" id="formJual" hidden>
+      <h2>💰 FORMAT JUAL AKUN</h2>
+      <p class="sub">Lengkapi informasi dan foto akun.</p>
+
+      <form id="jualForm">
+        <label>JUAL / NEED</label>
+        <select id="jJenis" required>
+          <option value="JUAL">JUAL</option>
+          <option value="NEED">NEED</option>
+        </select>
+
+        <label>AKUN</label>
+        <input id="jAkun" required placeholder="Nama / jenis akun">
+
+        <label>HARGA</label>
+        <input id="jHarga" required placeholder="Contoh: Rp500.000">
+
+        <label>SPEK</label>
+        <textarea id="jSpek" required placeholder="Spesifikasi akun"></textarea>
+
+        <label>LOG</label>
+        <input id="jLog" required placeholder="Keterangan log">
+
+        <label>BIND</label>
+        <input id="jBind" required placeholder="Keterangan bind">
+
+        <label>NO</label>
+        <input id="jNomor" required placeholder="Nomor penjual">
+
+        <label>FOTO AKUN</label>
+        <input type="file" id="jFoto" accept="image/*" required>
+
+        <div class="photo-preview" id="photoPreview">
+          <span>PREVIEW FOTO AKUN</span>
+          <img id="previewImg" alt="Preview foto akun">
+        </div>
+
+        <button class="gold-button" type="submit">
+          POSTING & HUBUNGI WHATSAPP ⚡
+        </button>
+      </form>
+    </section>
+
+    <section class="form-box">
+      <h2>📋 DAFTAR ANTRIAN</h2>
+      <div id="queueList">
+        <p class="empty">Belum ada antrian.</p>
+      </div>
+      <button class="clear-button" onclick="clearQueue()">
+        HAPUS ANTRIAN LOKAL
+      </button>
+    </section>
+
+    <section class="admin">
+      <h2>ADMIN RESMI MC</h2>
+      <p>HAJI AKBAR DEVELOPER</p>
+      <a class="wa-button" href="https://wa.me/6283182386351"
+         target="_blank">
+        <span>●</span> HUBUNGI ADMIN WHATSAPP
+      </a>
+      <small>WA ADMIN: 083182386351</small>
+    </section>
+
+    <section class="warning">
+      ⚠️ PERHATIAN!
+      <p>WAJIB GUNAKAN JASA ADMIN MC HAJI AKBAR.
+      SELALU PERIKSA KEASLIAN DATA DAN KEPEMILIKAN AKUN
+      SEBELUM MELAKUKAN TRANSAKSI.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 HAJI AKBAR DEVELOPER
+    <p>PREMIUM GOLD JASPOST SYSTEM</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
